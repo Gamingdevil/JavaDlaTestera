@@ -9,24 +9,18 @@ public class HomeworkOne {
         int numTwo = 3;
         int numThree = 42;
         int numFour = 16;
-
-        if ((numOne + numTwo) % 2 == 0) {
-            System.out.println("Even number");
+        
+        sumEvenOrOdd(sumEvenOrOdd(numOne,numTwo),sumEvenOrOdd(numThree,numFour));
+    }
+    
+    private static int sumEvenOrOdd(int first, int second) {
+        int sum = first + second;
+        string resultText = "The sum of " + first + " and " + second + " is ";
+        if (sum % 2 == 0) {
+            System.out.println(resultText + "even.")
         } else {
-            System.out.println("Odd number");
+            System.out.println(resultText + "odd.")
         }
-
-        if ((numThree + numFour) % 2 == 0) {
-            System.out.println("Even number");
-        } else {
-            System.out.println("Odd number");
-        }
-
-        if ((numOne + numTwo) % 2 == 0 && (numThree + numFour) % 2 == 0) {
-            System.out.println("Even numbers");
-        } else {
-            System.out.println("Odd numbers");
-        }
-
+        return sum;
     }
 }
